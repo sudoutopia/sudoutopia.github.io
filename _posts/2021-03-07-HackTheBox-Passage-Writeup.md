@@ -1,13 +1,6 @@
 ---
 title: "HackTheBox: Passage"
 excerpt: "Passage was an interesting machine, the initial foothold was quite trivial as it mostly involved a CVE to get a foothold in the system, the privilege escalation was a bit more difficult but nothing we really haven't seen before from other machines, which involves finding a hash for the user paul and then getting the ssh keys for Nadav in which we then exploit USBCreator D-Bus for root."
-tags:
-  - HackTheBox
-  - boot2root
-  - cve
-  - easy
-  - privilege escalation
-  - hardcoded credentials  
 ---
 
 # HackTheBox: Passage
