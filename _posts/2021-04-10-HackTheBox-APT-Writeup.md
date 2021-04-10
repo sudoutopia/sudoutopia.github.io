@@ -1,11 +1,5 @@
 # HackTheBox Writeup: APT
 
----
-
-title: "HackTheBox: Passage"
-excerpt: "In this machine, you start off with an nmap scan and notice that only 2 ports are open, 80 and 135, after some research you will find an exploit called IOXDResolver which you can use to enumerate interfaces / IPv6 address of the machine, and you nmap scan it which reveals a bunch more ports which you can potentially exploit to get a shell on the machine. You enumerate SMB and find a backup share with the SAM database in it, dump it to get users hashes, verify which users on the system exists, and pass the hash until you find a valid hash for a particular user, from then you get a shell as henry.vinson_adm by reading the registry hive which will reveal credentials to their corporate software and you'll notice a hint which mentions something related to the encryption used in the system which has been purposely weakened for some system administration related task (I assume), but since it's setup like that can make it vulnerable and you'll be able to steal the Domain controller hash by abusing Windows defender and listening for hashes with Responder.py and cracking the  Net-NTLMv1 hash with crack.sh which makes you able to dump the entire SAM database on the system and get Administrator hash which you can use to get an Administrator shell."
-
----
 
 ![Machine-cover](../assets/images/htb/APT/machine-cover.png)
 ![Machine-Chart](../assets/images/htb/APT/chart.png) 
