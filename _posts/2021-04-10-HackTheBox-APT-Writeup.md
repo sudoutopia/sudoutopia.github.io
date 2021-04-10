@@ -6,8 +6,8 @@ excerpt: "In this machine, you start off with an nmap scan and notice that only 
 tags: hackthebox windows AD winrm smb insane
 ---
 
-![Machine-cover](images/machine-cover.png)
-![Machine-Chart](images/chart.png) 
+![Machine-cover](../assets/images/htb/APT/machine-cover.png)
+![Machine-Chart](../assets/images/htb/APT/chart.png) 
 
 
 APT was a insane windows machine on HackTheBox, rooting it would aquire you 50-points and also a ton of new knowledge about AD and Windows! This was also coincidentally my first insane machine, and I have to say, for a first choice, this did definitely did not disappoint. For everyones' reference, I've placed the ip of the machine which is 10.10.10.213 into my /etc/hosts and binded it to the domain apt.htb.
@@ -54,7 +54,7 @@ Okay, cool, we have more information about the system, we know that we can't dir
 
 Visiting the webpage just reveals a static looking site which also exposes a domain name which we'll also put into your /etc/hosts in case of any vhosts, this also did not bring any different results but nonetheless can come in handy later.
 
-![webpage](images/webpage.png)
+![webpage](../assets/images/htb/APT/webpage.png)
 
 Loading up Burp and making it crawl for web pages did also not yield any interesting results, and from the source code of the page it looks like a static template provided by W3layouts.
 
@@ -814,11 +814,11 @@ Now, cracking NTLM hashes can be very time consuming, and this is where the real
 We just have to format the NTLMv1 hash now, so `APT$::HTB:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:1122334455667788` needs to be:
 ```NTHASH:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384```
 
-![crackshform](images/crackshform.png)
+![crackshform](../assets/images/htb/APT/crackshform.png)
 
 We enter the email to send the cracked hash. We shortly recieve an email that our job has been done.
 
-![crackshresult](images/crackshresult.png)
+![crackshresult](../assets/images/htb/APT/crackshresult.png)
 
 > Crack.sh has successfully completed its attack against your NETNTLM handshake. The NT hash for the handshake is included below, and can be plugged back into the 'chapcrack' tool to decrypt a packet capture, or to authenticate to the server:  
   Token: $NETNTLM$1122334455667788$95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384  
