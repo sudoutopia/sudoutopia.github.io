@@ -806,8 +806,8 @@ Now we have a hash with the challenge of `
 
 Now, cracking NTLM hashes can be very time consuming, and this is where the really cool part of the box comes in, the reason we specified that specific challenge in the NTLMv1 hash was so that we can use [crack.sh](https://crack.sh/) to crack it for free! [Here is a further explanation of how](https://crack.sh/netntlm/)
 
-We just have to format the NTLMv1 hash now, so `APT$::HTB:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:1122334455667788` needs to be:
-`NTHASH:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384`
+We just have to format the NTLMv1 hash now, so APT$::HTB:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:1122334455667788 needs to be:
+NTHASH:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384
 
 ![crackshform](../assets/images/htb/APT/crackshform.png)
 
