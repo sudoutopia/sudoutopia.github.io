@@ -822,7 +822,8 @@ Key: d167c3238864b12f5f82feae86a7f798
 This run took 32 seconds. Thank you for using crack.sh, this concludes your job.
 ```
   
- #### Edit:
+
+#### Edit:
 
 It seems like the route I went was actually unintended, although for some reason cannot get it to work anymore, which is **really** frustrating, I'm just unable to replicate it from my notes or anything. But besides that, I'll explain what I did at the time with the unintended route.
 
