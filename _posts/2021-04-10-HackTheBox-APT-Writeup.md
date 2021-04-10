@@ -807,7 +807,7 @@ Now we have a hash with the challenge of `
 Now, cracking NTLM hashes can be very time consuming, and this is where the really cool part of the box comes in, the reason we specified that specific challenge in the NTLMv1 hash was so that we can use [crack.sh](https://crack.sh/) to crack it for free! [Here is a further explanation of how](https://crack.sh/netntlm/)
 
 We just have to format the NTLMv1 hash now, so `APT$::HTB:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384:1122334455667788` needs to be:
-```NTHASH:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384```
+`NTHASH:95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384`
 
 ![crackshform](../assets/images/htb/APT/crackshform.png)
 
@@ -815,11 +815,12 @@ We enter the email to send the cracked hash. We shortly recieve an email that ou
 
 ![crackshresult](../assets/images/htb/APT/crackshresult.png)
 
-> Crack.sh has successfully completed its attack against your NETNTLM handshake. The NT hash for the handshake is included below, and can be plugged back into the 'chapcrack' tool to decrypt a packet capture, or to authenticate to the server:  
-  Token: $NETNTLM$1122334455667788$95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384  
-  Key: d167c3238864b12f5f82feae86a7f798  
-  This run took 32 seconds. Thank you for using crack.sh, this concludes your job.
-  
+```
+Crack.sh has successfully completed its attack against your NETNTLM handshake. The NT hash for the handshake is included below, and can be plugged back into the 'chapcrack' tool to decrypt a packet capture, or to authenticate to the server:  
+Token: $NETNTLM$1122334455667788$95ACA8C7248774CB427E1AE5B8D5CE6830A49B5BB858D384  
+Key: d167c3238864b12f5f82feae86a7f798  
+This run took 32 seconds. Thank you for using crack.sh, this concludes your job.
+```
   
  #### Edit:
 
